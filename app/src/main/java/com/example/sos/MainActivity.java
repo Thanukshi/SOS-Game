@@ -75,6 +75,14 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
                 return true;
             }
         }
-    
+
+        for(int i = 0; i < 3; i++){
+            if(buttonFields[0][i].equals(buttonFields[1][i]) &&  buttonFields[0][i].equals(buttonFields[2][i]) && !buttonFields[0][i].equals("")){
+                return true;
+            }
+        }
+        if(buttonFields[0][0].equals(buttonFields[1][1]) &&  buttonFields[0][0].equals(buttonFields[2][2]) && !buttonFields[0][0].equals("")){
+            return true;
+        }
     }
 }
