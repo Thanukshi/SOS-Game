@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Player1 = findViewById(R.id.player1);
-        Player1 = findViewById(R.id.player1);
+        Player2 = findViewById(R.id.player2);
 
 
     }
