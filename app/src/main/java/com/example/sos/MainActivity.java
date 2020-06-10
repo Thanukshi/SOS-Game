@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
 
     private TextView Player1;
     private TextView Player2;
+    private  Button Reset;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +37,13 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
             }
         }
 
-
+        Reset = findViewById(R.id.button_reset);
+        Reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                
+            }
+        });
     }
 
     @Override
