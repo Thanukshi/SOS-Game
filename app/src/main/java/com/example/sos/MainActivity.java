@@ -67,9 +67,14 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
 
         for(int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-
+                buttonFields[i][j] = buttons[i][j].getText().toString();
             }
         }
-        return false;
+        for(int i = 0; i < 3; i++){
+            if(buttonFields[i][0].equals(buttonFields[i][1]) &&  buttonFields[i][0].equals(buttonFields[i][2]) && !buttonFields[i][0].equals("")){
+                return true;
+            }
+        }
+    
     }
 }
