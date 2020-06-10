@@ -16,8 +16,8 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     private int player1Points;
     private int player2Points;
 
-    private TextView Player1;
-    private TextView Player2;
+    private TextView Player1Text;
+    private TextView Player2Text;
     private  Button Reset;
 
     @Override
@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Player1 = findViewById(R.id.player1);
-        Player2 = findViewById(R.id.player2);
+        Player1Text = findViewById(R.id.player1);
+        Player2Text = findViewById(R.id.player2);
 
 
         for(int i = 0; i < 3; i++){
@@ -128,5 +128,13 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         Toast.makeText(this,"Match is Draw.",Toast.LENGTH_SHORT).show();
         UpdatePointsText();
         resetBoard();
+    }
+
+    private void UpdatePointsText() {
+        Player1Text.setText("Player 1 : " +player1Points);
+        Player2Text.setText("Player 1 : " +player2Points);
+    }
+
+    private void resetBoard() {
     }
 }
