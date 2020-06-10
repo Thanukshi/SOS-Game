@@ -28,14 +28,15 @@
             android:textSize="30sp" />
 
         <Button
+            android:id="@+id/button_reset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="33dp"
-            android:text="@string/reset"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="33dp" />
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="33dp"
+            android:layout_marginRight="33dp"
+            android:text="@string/reset" />
 
 
     </RelativeLayout>
@@ -83,7 +84,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:textSize="60sp"
-            android:textAllCaps="true"/>
+            android:textAllCaps="true"
+            tools:ignore="NestedWeights" />
 
         <Button
             android:id="@+id/button5"
@@ -113,7 +115,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:textSize="60sp"
-            android:textAllCaps="true"/>
+            android:textAllCaps="true"
+            tools:ignore="NestedWeights" />
 
         <Button
             android:id="@+id/button8"
