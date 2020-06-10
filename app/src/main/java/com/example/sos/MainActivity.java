@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity  implements View.OnClickListener {
 
@@ -60,6 +61,18 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         }
         roundCount++;
 
+        if (checkWinPlayer()){
+            if(player1){
+                Player1IsWin();
+            }else {
+                Player2IsWin();
+            }
+        if (roundCount == 9) {
+                matchIsDraw();
+            } else {
+                player1 = !player1;
+            }
+        }
     }
 
     private boolean checkWinPlayer(){
@@ -84,5 +97,36 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         if(buttonFields[0][0].equals(buttonFields[1][1]) &&  buttonFields[0][0].equals(buttonFields[2][2]) && !buttonFields[0][0].equals("")){
             return true;
         }
+
+        if(buttonFields[0][2].equals(buttonFields[1][1]) &&  buttonFields[0][2].equals(buttonFields[2][0]) && !buttonFields[0][2].equals("")){
+            return true;
+        }
+
+        return false;
+    }
+
+    private void Player1IsWin() {
+        player1Points++;
+        Toast.makeText(this,"Player 1 is Win the match.",Toast.LENGTH_SHORT).show();
+        UpdatePointsText();
+        resetBoard();
+
+    }
+
+    private void Player2IsWin() {
+
+        player2Points++;
+        Toast.makeText(this,"Player 2 is Win the match.",Toast.LENGTH_SHORT).show();
+        UpdatePointsText();
+        resetBoard();
+
+    }
+
+    private void matchIsDraw() {
+
+        player1Points++;
+        Toast.makeText(this,"Match is Draw.",Toast.LENGTH_SHORT).show();
+        UpdatePointsText();
+        resetBoard();
     }
 }
