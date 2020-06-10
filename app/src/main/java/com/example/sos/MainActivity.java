@@ -29,12 +29,12 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         Player2Text = findViewById(R.id.player2);
 
 
-        for(int i = 0; i < 3; i++){
-            for(int j = 0; j < 3; j++){
-                String buttonID = "Button_" + i + j;
-                int resId = getResources().getIdentifier(buttonID,"id",getPackageName());
-                buttons[i][j] = findViewById(resId);
-                buttons[i][j].setOnClickListener((View.OnClickListener) this);
+          for(int i = 0; i < 3; i++){
+                for(int j = 0; j < 3; j++){
+                    String buttonID = "Button_" + i + j;
+                    int resId = getResources().getIdentifier(buttonID,"id",getPackageName());
+                      buttons[i][j] = findViewById(resId);
+//                buttons[i][j].setOnClickListener((View.OnClickListener) this);
             }
         }
 
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         });
     }
 
-    @Override
+   @Override
     public void onClick(View v) {
 
         if (!((Button) v).getText().toString().equals("")) {
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
                 player1 = !player1;
             }
         }
-    }
+ }
 
     private boolean checkWinPlayer(){
         String buttonFields[][] = new String[3][3];
