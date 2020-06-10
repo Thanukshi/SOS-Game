@@ -26,5 +26,12 @@ public class MainActivity extends AppCompatActivity {
         Player2 = findViewById(R.id.player2);
 
 
+        for(int i = 0; i < 3; i++){
+            for(int j = 0; j < 3; j++){
+                String buttonID = "Button" + i + j;
+            }
+        }
+
+
     }
 }
