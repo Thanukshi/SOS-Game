@@ -3,6 +3,7 @@ package com.example.sos;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -28,7 +29,10 @@ public class MainActivity extends AppCompatActivity {
 
         for(int i = 0; i < 3; i++){
             for(int j = 0; j < 3; j++){
-                String buttonID = "Button" + i + j;
+                String buttonID = "Button_" + i + j;
+                int resId = getResources().getIdentifier(buttonID,"id",getPackageName());
+                buttons[i][j] = findViewById(resId);
+                buttons[i][j].setOnClickListener((View.OnClickListener) this);
             }
         }
 
