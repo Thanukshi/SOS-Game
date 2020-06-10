@@ -41,13 +41,24 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         Reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+
             }
         });
     }
 
     @Override
     public void onClick(View v) {
+
+        if (!((Button) v).getText().toString().equals("")) {
+            return;
+        }
+        if (player1){
+            ((Button)v).setText("S");
+        }
+        else {
+            ((Button)v).setText("O");
+        }
+        roundCount++;
 
     }
 }
