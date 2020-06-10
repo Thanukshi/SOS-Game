@@ -8,6 +8,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private Button[][]buttons = new Button[3][3];
+    private boolean player1 = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
