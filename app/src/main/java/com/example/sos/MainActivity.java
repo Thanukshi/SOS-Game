@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  implements View.OnClickListener {
 
     private Button[][]buttons = new Button[3][3];
     private boolean player1 = true;
@@ -36,6 +36,11 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+
+    }
+
+    @Override
+    public void onClick(View v) {
 
     }
 }
