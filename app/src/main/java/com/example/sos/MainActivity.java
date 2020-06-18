@@ -34,7 +34,8 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
                     String buttonID = "Button_" + i + j;
                     int resId = getResources().getIdentifier(buttonID,"id",getPackageName());
                       buttons[i][j] = findViewById(resId);
-                      buttons[i][j].setOnClickListener((View.OnClickListener) this);
+//                      buttons[i][j].setOnClickListener(this);
+//                    buttons[i][j].setOnClickListener(this);
             }
         }
 
