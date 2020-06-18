@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private int player2Points;
     private TextView textViewPlayer1;
     private TextView textViewPlayer2;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
         if (player1Turn) {
-            ((Button) v).setText("X");
+            ((Button) v).setText("S");
         } else {
             ((Button) v).setText("O");
         }
